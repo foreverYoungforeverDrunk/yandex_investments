@@ -1,5 +1,4 @@
 import scrapy
-from scrapy.item import Item, Field
 from yandex_investments.items import YandexInvestmentsStock
 
 

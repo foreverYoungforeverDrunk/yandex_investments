@@ -3,14 +3,6 @@ BOT_NAME = 'yandex_investments'
 SPIDER_MODULES = ['yandex_investments.spiders']
 NEWSPIDER_MODULE = 'yandex_investments.spiders'
 FEED_EXPORT_ENCODING = 'utf-8'
-# FEED_EXPORT_FIELDS = ['name', 'risk', 'price']
-# FEED_FORMAT = 'csv'
-# FEED_URI = 'stocks.csv'
-
-# MONGODB_SERVER = "localhost"
-# MONGODB_PORT = 27017
-# MONGODB_DB = "invest_yandex"
-# MONGODB_COLLECTION = "stocks"
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
