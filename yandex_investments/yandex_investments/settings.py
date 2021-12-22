@@ -1,12 +1,3 @@
-# Scrapy settings for yandex_investments project
-#
-# For simplicity, this file contains only settings considered important or
-# commonly used. You can find more settings consulting the documentation:
-#
-#     https://docs.scrapy.org/en/latest/topics/settings.html
-#     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-
 BOT_NAME = 'yandex_investments'
 
 SPIDER_MODULES = ['yandex_investments.spiders']
@@ -16,6 +7,15 @@ FEED_EXPORT_ENCODING = 'utf-8'
 # FEED_FORMAT = 'csv'
 # FEED_URI = 'stocks.csv'
 
+# MONGODB_SERVER = "localhost"
+# MONGODB_PORT = 27017
+# MONGODB_DB = "invest_yandex"
+# MONGODB_COLLECTION = "stocks"
+
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27017
+MONGODB_DB = "invest_yandex"
+MONGODB_COLLECTION = "stocks"
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'yandex_investments (+http://www.yourdomain.com)'
 
@@ -23,7 +23,7 @@ FEED_EXPORT_ENCODING = 'utf-8'
 ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 32
+# CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -65,9 +65,9 @@ CONCURRENT_REQUESTS = 32
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    'yandex_investments.pipelines.YandexInvestmentsPipeline': 300,
-# }
+ITEM_PIPELINES = {
+   'yandex_investments.pipelines.YandexInvestmentsPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
